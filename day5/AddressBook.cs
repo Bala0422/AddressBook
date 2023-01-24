@@ -7,9 +7,81 @@
 
         public void AddContact(Contact contact)
         {
-            Contacts.Add(contact);
-            Console.WriteLine("Contact Added");
+            bool flag = false;
+            foreach (Contact c in Contacts)
+            {
+                if (contact.firstName == c.firstName)
+                {
+                    Console.WriteLine("Already a contact exists with current first name!");
+                    flag = true;
+
+                }
+
+            }
+
+            if (!flag)
+            {
+                Contacts.Add(contact);
+                Console.WriteLine("Contact Added");
+            }
+
+
         }
+
+
+        //UC8 to UC10
+
+        public void Search(string query)
+        {
+
+            Console.WriteLine("\n Search Results \n");
+            bool flag = false;
+            foreach (Contact c in Contacts)
+            {
+                if (c.city.Equals(query) || c.state.Equals(query)) {
+
+                    Display(c);
+                    flag = true;
+                }
+            }
+
+            if(! flag )
+            {
+                Console.WriteLine("No contacts found in that city or state!");
+            }
+            
+
+        }
+
+        public void Display(Contact contact)
+        {
+   
+                Console.WriteLine("NAME: " + contact.firstName + " " + contact.lastName);
+                Console.WriteLine("ADDRESS: " + contact.address);
+                Console.WriteLine("CITY: " + contact.city);
+                Console.WriteLine("STATE: " + contact.state);
+                Console.WriteLine("EMAIL: " + contact.email);
+                Console.WriteLine("ZIP: " + contact.Zip);
+                Console.WriteLine("Phone Number: " + contact.phoneNumber + "\n");
+            
+
+        }
+
+        public void Display()
+        {
+            foreach (Contact contact in Contacts)
+            {
+                Console.WriteLine("NAME: " + contact.firstName + " " + contact.lastName);
+                Console.WriteLine("ADDRESS: " + contact.address);
+                Console.WriteLine("CITY: " + contact.city);
+                Console.WriteLine("STATE: " + contact.state);
+                Console.WriteLine("EMAIL: " + contact.email);
+                Console.WriteLine("ZIP: " + contact.Zip);
+                Console.WriteLine("Phone Number: " + contact.phoneNumber + "\n" );
+            }
+
+        }
+
 
         public void EditContact(string fname)
         {
@@ -74,12 +146,12 @@
             }
         }
 
-    public void RemoveContact(Contact contact)
-    {
+        public void RemoveContact(Contact contact)
+        {
 
-        Console.WriteLine("Contact Removed");
-        Contacts.Remove(contact);
+            Console.WriteLine("Contact Removed");
+            Contacts.Remove(contact);
+        }
+
     }
-
-}
 }
