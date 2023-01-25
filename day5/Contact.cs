@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace day5
 {
+
+    [Serializable]
     public class Contact
     {
         public string firstName;
@@ -17,7 +19,7 @@ namespace day5
         public int Zip;
         public long phoneNumber;
 
-        public int length;
+        public int length; 
 
         public Contact(string fname, string lname, string address, string city, string state, string email, int zip, long phone) {
             
@@ -32,6 +34,13 @@ namespace day5
 
             this.length++;
         }
+
+        public string GiveData(Contact c)
+        {
+            return $"Name: {c.firstName + c.lastName} \n Address: {c.address} \n City: {c.city} \n State: {c.state} \n Email: {c.email} \n Zip: {c.Zip}, PhoneNumber: {c.phoneNumber} \n\n" ;
+        }
+
+        
 
     }
 }

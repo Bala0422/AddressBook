@@ -1,0 +1,18 @@
+Name: BalaMurugan 
+ Address: ge digital 
+ City: bengaluru 
+ State: Karnataka 
+ Email: bala@gmail.com 
+ Zip: 1234, PhoneNumber: 9994072206 
+Name: Rajaraja 
+ Address: ge digital 
+ City: hydrabad 
+ State: hydrabad 
+ Email: raja@gmail.com 
+ Zip: 1234, PhoneNumber: 9995572206 
+Name: Sairaja 
+ Address: ge digital 
+ City: bengaluru 
+ State: Karnataka 
+ Email: raja@gmail.com 
+ Zip: 1234, PhoneNumber: 9995572206 

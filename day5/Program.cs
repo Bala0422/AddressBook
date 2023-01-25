@@ -12,6 +12,10 @@ namespace day5
             Contact contact2 = new Contact("Raja", "raja", "ge digital", "hydrabad", "hydrabad", "raja@gmail.com", 1234, 9995572206);
             Contact contact3 = new Contact("Sai", "raja", "ge digital", "bengaluru", "Karnataka", "raja@gmail.com", 1234, 9995572206);
 
+
+           
+
+
             book.AddContact(contact1);
             book.AddContact(contact2);
             book.AddContact(contact3);
@@ -22,7 +26,14 @@ namespace day5
 
             // book.Display();
 
-            book.Search("hydrabad");
+            // book.Search("hydrabad");
+
+
+            FileOperations fileOperations = new FileOperations();
+
+            fileOperations.WriteIntoTextFile(book);
+
+
 
 
         }
